@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-6">
+      <h2>Add a new Bookmark</h2>
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.input :movie,
+                    collection: Movie.all,
+                    input_html: {
+                    multiple: true,
+                    data: { controller: 'tom_select'}
+                    } %>
+        <%= f.submit 'Add bookmark!', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
