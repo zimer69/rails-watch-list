@@ -1,15 +1,17 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-sm-6">
-      <h2>Add a new Bookmark</h2>
+<div class="background">
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class='m-5 col-12 col-lg-6 new-form' >
+      <h1 class='text-center'>Pick your movie(s)!</h1>
       <%= simple_form_for [@list, @bookmark] do |f| %>
         <%= f.input :movie,
+                    input_html: { class: "input-dark" },
                     collection: Movie.all,
                     input_html: {
                     multiple: true,
-                    data: { controller: 'tom_select'}
-                    } %>
-        <%= f.submit 'Add bookmark!', class: 'btn btn-primary' %>
+                    id: "input-tags",
+                    data: { controller: 'tom-select'}
+                    }%>
+        <%= f.submit "Add to #{@list.name}'s list", class: 'btn btn-dark w-100 mt-3' %>
       <% end %>
     </div>
   </div>

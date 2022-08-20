@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     resources :bookmarks, only: %i[create new]
   end
 
-  resources :movies, only: %i[index show new create]
+  resources :movies, only: %i[new create destroy]
 end

@@ -1,0 +1,14 @@
+.background {
+  background-image: url(https://images.unsplash.com/photo-1568111561564-08726a1563e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=808&q=80);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .background {
+    background-position-y: -55rem;
+  }
+}
