@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_list, only: %i[show]
+  skip_before_action :authenticate_user!, except: %i[create new]
 
   def index
     @movies = Movie.all
